@@ -19,7 +19,17 @@ export const createCar = (data) => fetch(BASE_URL, {
   .then((res) => res.json())
   .catch((error) => console.log(error));
 
-export const updateCar = (data) => fetch(BASE_URL, {
+export const updateStatus = (data) => fetch(`${BASE_URL}/updateStatus`, {
+  method: 'PUT',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+  .then((res) => res.json())
+  .catch((error) => console.log(error));
+
+export const updateCar = (data) => fetch(`${BASE_URL}/updateCar`, {
   method: 'PUT',
   headers: {
     'Content-Type': 'application/json',

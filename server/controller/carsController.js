@@ -18,6 +18,15 @@ exports.createCar = async (req, res) => {
   }
 };
 
+exports.updateStatus = async (req, res) => {
+  try {
+    const cars = await CarsTable.findByIdAndUpdate(req.body._id, { ...req.body, status: 'Sold' }, { new: true });
+    res.status(200).json(cars);
+  } catch (error) {
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
+
 exports.updateCar = async (req, res) => {
   try {
     const cars = await CarsTable.findByIdAndUpdate(req.body._id, req.body, { new: true });

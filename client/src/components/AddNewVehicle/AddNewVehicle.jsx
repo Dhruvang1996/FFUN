@@ -67,6 +67,7 @@ const FormDialog = () => {
             value={state.make}
             onChange={handleChange}
             placeholder="Make"
+            autoComplete="off"
             type="text"
             fullWidth
           />
@@ -77,6 +78,7 @@ const FormDialog = () => {
             value={state.model}
             onChange={handleChange}
             placeholder="Model"
+            autoComplete="off"
             type="text"
             fullWidth
           />
@@ -87,6 +89,7 @@ const FormDialog = () => {
             value={state.year}
             onChange={handleChange}
             placeholder="Year"
+            autoComplete="off"
             type="Number"
             fullWidth
           />
@@ -97,6 +100,7 @@ const FormDialog = () => {
             value={state.price}
             onChange={handleChange}
             placeholder="Price"
+            autoComplete="off"
             type="Number"
             fullWidth
           />

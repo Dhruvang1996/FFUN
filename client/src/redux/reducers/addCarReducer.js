@@ -6,19 +6,19 @@ export const carsSlice = createSlice({
     cars: [],
   },
   reducers: {
-    addNewCar(state, action) {
-      console.log(state, 'state111');
-      console.log(action, 'action111111');
-      return state.cars.push(action.payload);
+    addNewCar: (state, action) => {
+      return { ...state, cars: state.cars.concat([action.payload]) };
     },
-    setCars(state, action) {
-      console.log(state, 'state');
-      console.log(action, 'action');
-      return state.cars.concat(action.payload);
+    setCars: (state, action) => {
+      return { ...state, cars: action.payload };
+    },
+    soldCar(state, action) {
+      const index = state.cars.findIndex((findCar) => findCar._id === action.payload._id);
+      state.cars.splice(index, 1, action.payload);
     },
   },
 });
 
-export const { addNewCar, setCars } = carsSlice.actions;
+export const { addNewCar, setCars, soldCar } = carsSlice.actions;
 
 export default carsSlice.reducer;

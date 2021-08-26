@@ -15,7 +15,7 @@ const Table = () => {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', margin: '4vh' }}>
-      { allCars.length ? <TableList allCars={allCars} /> : <h2>No Cars To Show</h2>}
+      { allCars.cars.length ? <TableList allCars={allCars.cars} /> : <h2>No Cars To Show</h2>}
     </div>
   );
 };
