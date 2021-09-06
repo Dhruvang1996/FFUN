@@ -7,7 +7,7 @@ import { setCars } from '../../redux/reducers/addCarReducer';
 const Table = () => {
   const dispatch = useDispatch();
   const allCars = useSelector((state) => state.cars);
-  useEffect(async () => {
+  useEffect(() => {
     getCars().then((res) => {
       dispatch(setCars(res));
     });

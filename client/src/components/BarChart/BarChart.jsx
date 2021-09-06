@@ -27,6 +27,11 @@ const BarChart = () => {
         height={200}
         width={300}
         options={{
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
           maintainAspectRatio: false,
         }}
       />

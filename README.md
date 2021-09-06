@@ -36,7 +36,7 @@ backend Framework: Node + express
 
 database: Mongo Atlas (mongoose ODM)
 1) Easy to connect with cloud storage.
-2) No-Sql database allows us to scale the daata model easily.
+2) No-Sql database allows us to scale the data model easily.
 3) Mongoose ODM allows us to make partial relational database.
 4) Light weight, easy to use and faster than RDBMS.
 

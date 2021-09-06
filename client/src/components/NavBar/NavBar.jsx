@@ -35,7 +35,7 @@ const NavBar = () => {
         .toLocaleLowerCase())));
       const indexOfAll = (arr, val) => arr
         .reduce((acc, el, i) => (el.includes(val) ? [...acc, i] : acc), []);
-      const temp1 = indexOfAll(temp, event).map((index) => filterArray[index]);
+      const temp1 = indexOfAll(temp, event.toLocaleLowerCase()).map((index) => filterArray[index]);
       dispatch(setCars(temp1));
     } else {
       dispatch(setCars(holdingOrigionalState));

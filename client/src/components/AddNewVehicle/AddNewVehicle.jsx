@@ -26,6 +26,7 @@ const FormDialog = () => {
   };
 
   const handleClose = () => {
+    setState(initialState);
     setOpen(false);
   };
 
@@ -42,7 +43,7 @@ const FormDialog = () => {
   };
 
   const validateForm = () => {
-    if (state.make && state.model && (state.year) && (state.price)) return false;
+    if (state.make && state.model && state.year && state.price) return false;
     return true;
   };
 
